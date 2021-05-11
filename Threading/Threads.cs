@@ -99,11 +99,10 @@ namespace Threading
                 Counter c = (Counter)obj;
 
                 Console.WriteLine("Второй поток:");
-                Console.WriteLine(i*c.x *c.y);
+                Console.WriteLine(i * c.x * c.y);
             }
         }
     }
-
 
     public class Counter
     {
