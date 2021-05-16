@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{32C9A157-607E-4BA3-95B2-FC50DFDE78B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitProgram", "AsyncAwaitProgram\AsyncAwaitProgram.csproj", "{07BDB023-39B2-4C10-ACED-BA941ACC8B9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{32C9A157-607E-4BA3-95B2-FC50DFDE78B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32C9A157-607E-4BA3-95B2-FC50DFDE78B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32C9A157-607E-4BA3-95B2-FC50DFDE78B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BDB023-39B2-4C10-ACED-BA941ACC8B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BDB023-39B2-4C10-ACED-BA941ACC8B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BDB023-39B2-4C10-ACED-BA941ACC8B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BDB023-39B2-4C10-ACED-BA941ACC8B9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
