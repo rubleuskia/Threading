@@ -6,7 +6,7 @@ namespace AsyncAwaitProgram
     class Program
     {
         // https://tutorial.eyehunts.com/android/android-handler-background-thread-communicate-ui-thread/
-        // (!) http://hvasconcelos.github.io/articles/Offloading-work-from-the-UI-Thread
+        // http://hvasconcelos.github.io/articles/Offloading-work-from-the-UI-Thread
         // https://accedia.com/blog/introduction-to-asynchronous-programming-in-dot-net/
 
         static async Task Main(string[] args)

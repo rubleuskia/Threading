@@ -17,6 +17,7 @@ namespace AsyncAwaitProgram
     {
         static void Factorial()
         {
+
             int result = 1;
             for(int i = 1; i <= 6; i++)
             {
@@ -32,6 +33,7 @@ namespace AsyncAwaitProgram
         {
             Console.WriteLine("Начало метода FactorialAsync"); // выполняется синхронно
             await Task.Run(() => Factorial()); // выполняется асинхронно
+
             // await возвращает управление в main
             // следующая строка выполниться после завершения факториала
             Console.WriteLine("Конец метода FactorialAsync");
@@ -44,6 +46,7 @@ namespace AsyncAwaitProgram
             Console.WriteLine("Введите число: ");
             int n = Int32.Parse(Console.ReadLine());
             Console.WriteLine($"Квадрат числа равен {n * n}");
+            Thread.Sleep(10000);
             Console.WriteLine("Конец метода Main");
 
             Console.Read();
