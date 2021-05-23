@@ -39,17 +39,21 @@ namespace AsyncAwaitProgram
             Console.WriteLine("Конец метода FactorialAsync");
         }
 
-        public static void Run1()
+        public static async Task Run1()
         {
-            FactorialAsync();   // вызов асинхронного метода
+            // FactorialAsync();   // вызов асинхронного метода
+            //
+            // Console.WriteLine("Введите число: ");
+            // int n = Int32.Parse(Console.ReadLine());
+            // Console.WriteLine($"Квадрат числа равен {n * n}");
+            // Thread.Sleep(10000);
+            // Console.WriteLine("Конец метода Main");
+            //
+            // Console.Read();
 
-            Console.WriteLine("Введите число: ");
-            int n = Int32.Parse(Console.ReadLine());
-            Console.WriteLine($"Квадрат числа равен {n * n}");
-            Thread.Sleep(10000);
-            Console.WriteLine("Конец метода Main");
-
-            Console.Read();
+            Console.WriteLine("before task");
+            await new Task(() => Console.Write("inisde task"));
+            Console.WriteLine("after task");
         }
 
         // --------------------------------------------------------------------
@@ -72,7 +76,7 @@ namespace AsyncAwaitProgram
             using (StreamReader reader = new StreamReader("hello.txt"))
             {
                 string result = await reader.ReadToEndAsync();  // асинхронное чтение из файла
-                Console.WriteLine("Чтение из файла выполнено, поток: " + Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine("Чтение из файла выполнено, поток: " + Thread.CurrentThread.ManagedThreadId); // 8
                 Console.WriteLine(result);
             }
         }
@@ -124,13 +128,15 @@ namespace AsyncAwaitProgram
                 result *= i;
             }
 
+            Console.WriteLine("Метод FactorialWithReturnValue: " + Thread.CurrentThread.ManagedThreadId);
+
             return result;
         }
 
         // определение асинхронного метода
         static async void FactorialAsync(int n)
         {
-            int x = await Task.Run(() => FactorialWithReturnValue(n));
+            var x = await Task.Run(() => FactorialWithReturnValue(n));
             Console.WriteLine($"Факториал равен {x}");
         }
 
