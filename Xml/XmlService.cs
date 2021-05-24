@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using System.Xml.Serialization;
 
 namespace Xml
 {
@@ -258,7 +256,7 @@ namespace Xml
 
         public static void LinqToXml4()
         {
-            XDocument xdoc = XDocument.Load("phones.xml");
+            XDocument xdoc = XDocument.Load("phones-linq.xml");
 
             var items = xdoc.Element("phones")
                 .Elements("phone")
@@ -277,7 +275,7 @@ namespace Xml
 
         public static void LinqToXml5()
         {
-            XDocument xdoc = XDocument.Load("phones.xml");
+            XDocument xdoc = XDocument.Load("phones-linq.xml");
             XElement root = xdoc.Element("phones");
 
             foreach (XElement xe in root.Elements("phone").ToList())
@@ -302,7 +300,7 @@ namespace Xml
                 new XElement("company", "Nokia"),
                 new XElement("price", "19500")));
 
-            xdoc.Save("pnones1.xml");
+            xdoc.Save("phones1.xml");
             // выводим xml-документ на консоль
             Console.WriteLine(xdoc);
             Console.Read();

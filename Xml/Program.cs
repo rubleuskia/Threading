@@ -20,10 +20,9 @@ namespace Xml
             // XmlService.LinqToXml3();
             // XmlService.LinqToXml4();
             // XmlService.LinqToXml5();
-            // XmlService.XmlSerializer();
 
             // XmlSerialization.Run1();
-            XmlSerialization.Run2();
+            // XmlSerialization.Run2();
             Console.ReadKey();
         }
     }

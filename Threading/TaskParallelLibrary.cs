@@ -293,7 +293,7 @@ namespace Threading
             int result = 1;
             for (int i = 1; i <= x; i++)
             {
-                if (token.IsCancellationRequested)
+                if (linkedTokenSource.Token.IsCancellationRequested)
                 {
                     Console.WriteLine("Операция прервана токеном");
                     return;

@@ -16,7 +16,7 @@ namespace JSON
 
         public static void Run1()
         {
-            Person tom = new Person {Name = "Tom", Age = 35};
+            Person tom = new Person { Name = "Tom", Age = 35 };
             string json = JsonSerializer.Serialize<Person>(tom);
             Console.WriteLine(json);
             Person restoredPerson = JsonSerializer.Deserialize<Person>(json);
@@ -46,6 +46,8 @@ namespace JSON
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true,
+                IgnoreNullValues = false,
+
                 // ...
             };
 

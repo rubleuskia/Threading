@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<users>
-    <user name="Bill Gates">
-        <company>Microsoft</company>
-        <age>48</age>
-    </user>
-    <user name="Larry Page">
-        <company>Google</company>
-        <age>48</age>
-    </user>
-</users>
+<?xml version="1.0"?>
+<ArrayOfPersonWithCompany xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <PersonWithCompany>
+        <Name>Tom</Name>
+        <Age>29</Age>
+        <Company>
+            <Name>Microsoft</Name>
+        </Company>
+    </PersonWithCompany>
+    <PersonWithCompany>
+        <Name>Bill</Name>
+        <Age>25</Age>
+        <Company>
+            <Name>Apple</Name>
+        </Company>
+    </PersonWithCompany>
+</ArrayOfPersonWithCompany>

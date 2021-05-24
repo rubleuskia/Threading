@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Threads.Run1();
+            //Threads.Run1();
             // Threads.Run2();
             // Threads.Run3();
             // Threads.Run4();
@@ -26,7 +26,7 @@
             // TaskParallelLibrary.Run9();
             // TaskParallelLibrary.Run10();
             // TaskParallelLibrary.Run11();
-            // TaskParallelLibrary.Run12();
+             TaskParallelLibrary.Run12();
             // TaskParallelLibrary.Run13();
         }
     }

@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Xml.Serialization;
 
 namespace Xml
@@ -25,28 +26,28 @@ namespace Xml
 
         public static void Run1()
         {
-            // объект для сериализации
-            Person person = new Person("Tom", 29);
-            Console.WriteLine("Объект создан");
-
+            // // объект для сериализации
+            // Person person = new Person("Tom", 29);
+            // Console.WriteLine("Объект создан");
+            //
             // передаем в конструктор тип класса
             XmlSerializer formatter = new XmlSerializer(typeof(Person));
-
-            // получаем поток, куда будем записывать сериализованный объект
-            using (FileStream fs = new FileStream("persons.xml", FileMode.OpenOrCreate))
-            {
-                formatter.Serialize(fs, person);
-
-                Console.WriteLine("Объект сериализован");
-            }
+            //
+            // // получаем поток, куда будем записывать сериализованный объект
+            // using (FileStream fs = new FileStream("persons.xml", FileMode.OpenOrCreate))
+            // {
+            //     formatter.Serialize(fs, person);
+            //
+            //     Console.WriteLine("Объект сериализован");
+            // }
 
             // десериализация
             using (FileStream fs = new FileStream("persons.xml", FileMode.Open))
             {
-                Person newPerson = (Person)formatter.Deserialize(fs);
+                Person[] newPerson = (Person[])formatter.Deserialize(fs);
 
-                Console.WriteLine("Объект десериализован");
-                Console.WriteLine($"Имя: {newPerson.Name} --- Возраст: {newPerson.Age}");
+                // Console.WriteLine("Объект десериализован");
+                // Console.WriteLine($"Имя: {newPerson.Name} --- Возраст: {newPerson.Age}");
             }
 
             Console.ReadLine();
