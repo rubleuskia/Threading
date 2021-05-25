@@ -11,7 +11,7 @@ namespace Xml
             User user2 = new User { Name = "Larry Page", Age = 42, Company = "Google" };
             List<User> users = new List<User> { user1, user2 };
 
-            // XmlService.PrintXml();
+            XmlService.PrintXml();
             // XmlService.ParseUsers();
             // XmlService.UpdateXml();
             // XmlService.Xpath();
